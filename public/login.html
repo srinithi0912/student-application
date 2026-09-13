@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>Student Application</h2>
+
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="students.html">Student Details</a>
+        <a href="courses.html">Courses</a>
+    </nav>
+
+    <div class="container login-box">
+
+        <h1>Student Login</h1>
+
+        <form onsubmit="login(event)">
+
+            <label>Username</label>
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter username"
+                required
+            >
+
+            <label>Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+                required
+            >
+
+            <button type="submit">Login</button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script>
+
+        function login(event) {
+
+            event.preventDefault();
+
+            let username =
+                document.getElementById("username").value;
+
+            document.getElementById("message").innerHTML =
+                "Welcome " + username + "! Login successful.";
+
+        }
+
+    </script>
+
+</body>
+</html>
